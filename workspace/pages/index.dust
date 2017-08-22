@@ -7,8 +7,13 @@
 			<table>
 				<tr>
 					<td>Test input:</td>
-					<td><input type="text" name="test_input"></td>
+					<td><input type="text" name="test_input_unsafe"></td>
 				</tr>
+				{?form_data.test_input_unsafe}
+				<tr>
+					<td colspan="2"><span class="highlight">Test input was '{form_data.test_input_unsafe}'</span></td>
+				</tr>
+				{/form_data.test_input_unsafe}
 				<tr>
 					<td colspan="2"><input type="submit" value="Submit form"></td>
 				</tr>
@@ -21,7 +26,7 @@
 			<table>
 				<tr>
 					<td>Test input:</td>
-					<td><input type="text" name="test_input"></td>
+					<td><input type="text" name="test_input_safe"></td>
 				</tr>
 				<tr>
 					<td>CSRF Token:</td>
@@ -30,11 +35,11 @@
 						<input type="hidden" name="_csrf" value="{csrfToken}">
 					</td>
 				</tr>
-				{?form_data.test_input}
+				{?form_data.test_input_safe}
 				<tr>
-					<td colspan="2"><span class="highlight">Test input was '{form_data.test_input}'</span></td>
+					<td colspan="2"><span class="highlight">Test input was '{form_data.test_input_safe}'</span></td>
 				</tr>
-				{/form_data.test_input}
+				{/form_data.test_input_safe}
 				<tr>
 					<td colspan="2"><input type="submit" value="Submit form"></td>
 				</tr>
