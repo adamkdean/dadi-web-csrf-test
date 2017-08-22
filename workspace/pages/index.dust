@@ -1,12 +1,46 @@
 {>"partials/header" /}
 
-{#posts.results}
-	{>"partials/post" /}
-{/posts.results}
-
-{>"partials/pagination" 
-	currentPage=posts.metadata.page
-	totalPages=posts.metadata.totalPages
-/}
+<div class="grid">
+	<div class="float_left">
+		<h2>Form without CSRF:</h2>
+		<form action="/" method="post">
+			<table>
+				<tr>
+					<td>Test input:</td>
+					<td><input type="text" name="test_input"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="Submit form"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div class="float_right">
+		<h2>Form with CSRF:</h2>
+		<form action="/" method="post">
+			<table>
+				<tr>
+					<td>Test input:</td>
+					<td><input type="text" name="test_input"></td>
+				</tr>
+				<tr>
+					<td>CSRF Token:</td>
+					<td>
+						<span>{csrfToken}</span>
+						<input type="hidden" name="_csrf" value="{csrfToken}">
+					</td>
+				</tr>
+				{?form_data.test_input}
+				<tr>
+					<td colspan="2"><span class="highlight">Test input was '{form_data.test_input}'</span></td>
+				</tr>
+				{/form_data.test_input}
+				<tr>
+					<td colspan="2"><input type="submit" value="Submit form"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
 
 {>"partials/footer" /}

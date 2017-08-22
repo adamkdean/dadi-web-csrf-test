@@ -1,4 +1,6 @@
 <footer>
+  <pre>{@contextDump/}</pre><hr>
+  &#x1F50F; csrfToken: {csrfToken}<br>
   &#x26A1; Powered by <a href="https://dadi.tech/platform/web">DADI Web {version}</a>
 </footer>
 

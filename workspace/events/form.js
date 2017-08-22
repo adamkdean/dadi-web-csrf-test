@@ -1,8 +1,13 @@
+//
+// This event simply exposes the form data (request body)
+// to the page for display purposes.
+// 
+
 var Event = function (req, res, data, callback) {
-  // Date and time to play with
-  data.global.timestamp = new Date().getTime()
-  
-  // Fin
+  if (req.method === 'POST') {
+    data.form_data = req.body
+  }
+
   callback(null)
 }
 

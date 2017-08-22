@@ -13,6 +13,8 @@
     }
   ],
   "datasources": [
-    "posts"
+  ],
+  "events": [
+    "form"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "global": {
-    "site": "Your site name",
-    "description": "An exciting beginning."
+    "site": "dadi-web-csrf-test",
+    "description": "An example of using CSRF protection"
   },
   "globalEvents": [
     "global"

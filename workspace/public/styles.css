@@ -76,65 +76,7 @@ article img {
 article ol, ul {
 	margin-left: 20px;
 }
-
-/*
-	Code highlighting
-*/
-
-code {
-	display: inline-block;
-	background: #EFEFE9;
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	padding: 0 5px;
-	margin-bottom: -1px;
-	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-}
-pre code {
-	padding: 15px;
-	margin-bottom: 20px;
-	display: block;
-	overflow: scroll;
-}
-
-
-/*
-	Pagination
-*/
-
-.pagination {
-	display: block;
-	padding-top: 20px;
-	font-size: 15px;
-}
-.pagination--page {
-	margin: 0 5px 0 0;
-	border-radius: 100px;
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	line-height: 30px;
-	text-align: center;
-}
-.pagination--page:hover {
-	background: #ddd;
-}
-.pagination li {
-	display: inline-block;
-	list-style: none;
-}
-.pagination--active {
-	color: #fff;
-	background: #000;
-}
-.pagination--next,
-.pagination--prev {
-	color: #969693;
-}
-.pagination--page {
-	display: inline-block;
-}
-
+	
 /* 
 	Footer
 */
@@ -144,6 +86,27 @@ footer {
 	font-size: 15px;
 }
 footer a {
+	color: #e42918;
+	font-weight: bold;
+}
+
+/*
+	Custom
+*/
+div.float_left {
+	float: left;
+	width: 50%;
+}
+div.float_right {
+	float: right;
+	width: 50%;
+}
+div.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+span.highlight {
 	color: #e42918;
 	font-weight: bold;
 }
