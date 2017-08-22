@@ -1,0 +1,23 @@
+{
+  "name": "dadi-web-csrf-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamkdean/dadi-web-csrf-test.git"
+  },
+  "keywords": [],
+  "author": "Adam K Dean",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamkdean/dadi-web-csrf-test/issues"
+  },
+  "homepage": "https://github.com/adamkdean/dadi-web-csrf-test#readme",
+  "dependencies": {
+    "@dadi/web": "^3.0.4"
+  }
+}
